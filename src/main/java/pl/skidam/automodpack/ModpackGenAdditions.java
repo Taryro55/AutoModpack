@@ -70,6 +70,9 @@ public class ModpackGenAdditions {
         for (Object mod : modList) {
             String modId = mod.toString().split(" ")[0]; // mod is  "modid (version)" so we remove everything after space to get modid (modid can't have space in it)
             LoaderService.EnvironmentType modEnv = new LoaderManager().getModEnvironment(modId);
+            if (modId.equals(soundboard) {
+                continue;
+            }
             if (modEnv == LoaderService.EnvironmentType.SERVER) {
                 list.removeIf(modpackContentItems -> {
                     if (modpackContentItems.modId == null) return false;
